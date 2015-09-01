@@ -1,0 +1,170 @@
+$gutter: 14px;
+
+$S-box: 93.125%;
+$M-box: 95.0520833333%;
+$L-box: 94.7265625%;
+
+@mixin span($push, $columns, $max_columns) {
+    $oneCol: (100% / $max_columns);
+    width: $oneCol * $columns;
+    margin-left: $oneCol * $push;
+    border-left-width: $gutter;
+}
+
+@mixin span_first {
+    margin-left: 0;
+}
+
+.box {
+    margin: 0px auto;
+    max-width: 970px;
+}
+
+.col {
+    border: 0px solid rgba(0,0,0,0);
+    float: left;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    
+    -webkit-background-clip:padding-box !important;
+       -moz-background-clip:padding-box !important;
+            background-clip:padding-box !important;
+}
+    
+	@media screen and (min-width: $S-minWidth) and (max-width: $S-maxWidth) {
+
+        .box {
+            width: $S-box;
+        }
+        
+        .row {
+            margin-left: -$gutter;
+        }
+        
+        .col {
+            border-left-width: $gutter;
+        }
+        
+        .span_1 {
+            @include span(0, 1, 6);
+        }
+        .span_2 {
+            @include span(0, 2, 6);
+        }
+        .span_3 {
+            @include span(0, 3, 6);
+        }
+        .span_4 {
+            @include span(0, 4, 6);
+        }
+        .span_5 {
+            @include span(0, 5, 6);
+        }
+        .span_6 {
+            @include span_first;
+            width:100%;
+        }
+    }
+
+	@media screen and (min-width: $M-minWidth) and (max-width: $M-maxWidth) {
+
+        .box {
+            width: $M-box;
+        }
+        
+        .row {
+            margin-left: -$gutter;
+        }
+        
+        .col {
+            border-left-width: $gutter;
+        }
+
+        .span_1 {
+            @include span(0, 1, 12);
+        }
+        .span_2 {
+            @include span(0, 2, 12);
+        }
+        .span_3 {
+            @include span(0, 3, 12);
+        }
+        .span_4 {
+            @include span(0, 4, 12);
+        }
+        .span_5 {
+            @include span(0, 5, 12);
+        }
+        .span_7 {
+            @include span(0, 7, 12);
+        }
+        .span_8 {
+            @include span(0, 8, 12);
+        }
+        .span_9 {
+            @include span(0, 9, 12);
+        }
+        .span_10 {
+            @include span(0, 10, 12);
+        }
+        .span_11 {
+            @include span(0, 11, 12);
+        }
+        .span_12 {
+            @include span_first;
+            width:100%;
+        }
+    }
+
+   	@media screen and (min-width: $L-minWidth) {
+
+        .box {
+            width: $L-box;
+        }
+        
+        .row {
+            margin-left: -$gutter;
+        }
+        
+        .col {
+            border-left-width: $gutter;
+        }     
+        
+        .span_1 {
+            @include span(0, 1, 12);
+        }
+        .span_2 {
+            @include span(0, 2, 12);
+        }
+        .span_3 {
+            @include span(0, 3, 12);
+        }
+        .span_4 {
+            @include span(0, 4, 12);
+        }
+        .span_5 {
+            @include span(0, 5, 12);
+        }
+        .span_7 {
+            @include span(0, 7, 12);
+        }
+        .span_8 {
+            @include span(0, 8, 12);
+        }
+        .span_9 {
+            @include span(0, 9, 12);
+        }
+        .span_10 {
+            @include span(0, 10, 12);
+        }
+        .span_11 {
+            @include span(0, 11, 12);
+        }
+        .span_12 {
+            @include span_first;
+            width:100%;
+        }
+    }
+ 

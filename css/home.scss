@@ -1,0 +1,27 @@
+
+.container {
+    background: blue;
+    height: 200px;
+}
+    
+	@media screen and (min-width: $S-minWidth) and (max-width: $S-maxWidth) {
+        
+        .container.span_ {
+            @include span(3, 3, 6);
+        }
+    }
+    
+	@media screen and (min-width: $M-minWidth) and (max-width: $M-maxWidth) {     
+        
+        .container.span_ {
+            @include span(1, 2, 12);
+        }
+    }
+    
+	@media screen and (min-width: $L-minWidth) {       
+        
+        .container.span_ {
+            @include span(0, 1, 12);
+        }
+    }
+ 
